@@ -1,0 +1,135 @@
+.musicPlayer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+
+  padding-bottom: 1.5rem;
+}
+.musicPlayer > * {
+  width: 90%;
+  background-color: var(--color-darksagegreen);
+}
+
+/*Music Player Child*/
+.player {
+  height: 250px;
+
+  display: flex;
+  gap: 1rem;
+  padding: 15px;
+}
+.playlist {
+  height: auto;
+}
+
+/*Player*/
+.player > * {
+  width: 100%;
+}
+.player-image > img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.player-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px 10px;
+  background-color: var(--color-sagegreen);
+  color: var(--color-darksagegreen);
+}
+
+.player-description > p {
+  margin: 0.5rem 0;
+}
+.player-controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 45%;
+}
+
+.controls {
+  background-color: var(--color-darksagegreen);
+  padding: 10px;
+
+  display: flex;
+  justify-content: space-around;
+}
+.controls button {
+  outline: none;
+  border: none;
+  background-color: var(--color-darksagegreen);
+}
+.icons {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--color-sagegreen);
+
+  transition: all 0.5 ease;
+}
+.icons:hover {
+  color: var(--color-earthygreen);
+  transform: scale(1.05);
+}
+
+/*Playlist*/
+.playlist > ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+
+  padding: 1rem 0;
+}
+.playlist-song {
+  list-style-type: none;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 10px;
+
+  background-color: var(--color-earthygreen);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.playlist-song:hover {
+  opacity: 0.6;
+}
+.active {
+  background-color: var(--color-lightgreen);
+  color: var(--color-darksagegreen);
+}
+
+/*Responsive*/
+
+@media (max-width: 900px) {
+  .player {
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    gap: 0.5rem;
+  }
+
+  .player-description {
+    display: none;
+  }
+
+  .player-image,
+  .player-content {
+    width: 85%;
+    padding: 0;
+  }
+  .player-content {
+    background-color: var(--color-darksagegreen);
+  }
+  .controls {
+    padding: 0;
+  }
+}
+@media (max-width: 600px) {
+  .player-image {
+    width: 100%;
+  }
+}
